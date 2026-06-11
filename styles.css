@@ -6,11 +6,13 @@
 }
 
 body{
+   
     background-image: url(images/eacbd3ac6a3d097d54dd5a6d9c8f47b7.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding:20px;
+   
 }
 
 h1{
@@ -109,6 +111,9 @@ h1{
 
 }
 
-
-
-
+@media(max-width:700px){
+    .board{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
