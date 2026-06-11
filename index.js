@@ -76,6 +76,12 @@ function addTask() {
         return;
     }
 
+    else if(dueDate === ""){
+     alert("Please enter a date");
+        return;
+    }
+
+
     let task = new Task( title,labelInput.value);
     tasks.push(task);
     taskInput.value = "";

@@ -3,6 +3,9 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial, sans-serif;
+    color:white;
+    font-size: 20px;
+     font-family: "Raleway", sans-serif;
 }
 
 body{
@@ -34,6 +37,16 @@ h1{
 
 }
 
+#dueDate{
+    background-color: #4c90af56;
+}
+
+option{
+    background-color: #b4bef4;
+}
+#labelInput{
+    background-color: #395def89;
+}
 .add{
     background-color: rgb(138, 150, 251);
     min-width: 30%;
@@ -94,7 +107,7 @@ h1{
 
 .move-button {
   background-color: #aa00ff; 
-  color: white;
+  color: rgb(200, 224, 246);
   font-size: 14px;
   font-weight: bold;
   border: none;
