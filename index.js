@@ -179,7 +179,6 @@ function loadTasks() {
         localStorage.getItem("tasks");
 
     if (saved) {
-
         tasks =JSON.parse(saved);
     }
 }
@@ -193,9 +192,7 @@ function editTask(id) {
     });
 
     let newTitle = prompt("Edit Task", task.title);
-
     if (!newTitle) return;
-
     task.title = newTitle;
 
     saveTasks();
