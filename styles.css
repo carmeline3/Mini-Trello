@@ -6,7 +6,10 @@
 }
 
 body{
-    background:#0079bf;
+    background-image: url(images/eacbd3ac6a3d097d54dd5a6d9c8f47b7.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding:20px;
 }
 
@@ -19,6 +22,10 @@ h1{
     display:flex;
     gap:10px;
     margin-bottom:15px;
+}
+
+.add{
+    background-color: rgb(31, 43, 152);
 }
 
 .top-bar input,.top-bar select,.top-bar button{
@@ -38,7 +45,7 @@ h1{
 }
 
 .column{
-    background:#ebecf0;
+    background-color:rgba(96, 114, 183, 0.573);
     width:300px;
     min-height:500px;
     padding:15px;
@@ -70,3 +77,38 @@ h1{
     margin-right:5px;
     padding:5px;
 }
+
+
+.move-button {
+  background-color: #aa00ff; 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px; 
+
+}
+
+.edit-button {
+  background-color: #4c90af;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.delete-button {
+  background-color: #ff0062; 
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px; 
+
+}
+
+
+
+

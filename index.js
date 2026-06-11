@@ -67,32 +67,17 @@ class Task {
 
 let tasks = [];
 
-// function addTask(){
-//     let title =taskInput.value.trim();
-//     if(title===""){
-//         return alert("Please ")
-//     }
-// }
-
-
-
-
 
 
 function addTask() {
-    let title = taskInput.value.trim();
+    let title = taskInput.value;
     if (title === "") {
         alert("Please enter a task.");
         return;
     }
 
-    tasks.push(
-        new Task(
-            title,
-            labelInput.value
-        )
-    );
-
+    let task = new Task( title,labelInput.value);
+    tasks.push(task);
     taskInput.value = "";
 
 
@@ -113,9 +98,14 @@ function displayTasks() {
 
         if (task.label === "Studies") {
             color = "pink";
-        } else if (task.label === "Client Work") {
+        }
+         else if (task.label === "Client Work") {
             color = "green";
-        } else {
+        } 
+        else if(task.label==="Personal Work"){
+            color="black";
+        }
+        else {
             color = "purple";
         }
 
@@ -128,12 +118,10 @@ function displayTasks() {
                     style="background:${color}">
                     ${task.label}
                 </span>
-
-                <button onclick="moveTask(${task.id})"> Move</button>
-
-                <button onclick="editTask(${task.id})"> Edit</button>
-
-                <button onclick="deleteTask(${task.id})">Delete</button>
+                <br>
+                <button class="move-button" onclick="moveTask(${task.id})"> Move</button>
+                <button class="edit-button" onclick="editTask(${task.id})"> Edit</button>
+                <button class="delete-button" onclick="deleteTask(${task.id})">Delete</button>
             </div>
         `;
 
@@ -193,7 +181,6 @@ function loadTasks() {
     if (saved) {
 
         tasks =JSON.parse(saved);
-
     }
 }
 
@@ -201,16 +188,11 @@ loadTasks();
 displayTasks();
 
 function editTask(id) {
+    const task = tasks.find(function(task) {
+        return task.id === id;
+    });
 
-    const task = tasks.find(
-        task => task.id === id
-    );
-
-    const newTitle =
-        prompt(
-            "Edit Task",
-            task.title
-        );
+    let newTitle = prompt("Edit Task", task.title);
 
     if (!newTitle) return;
 
