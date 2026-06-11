@@ -111,6 +111,10 @@ h1{
 
 }
 
+
+button{
+    cursor: pointer;
+}
 @media(max-width:700px){
     .board{
         display: grid;
